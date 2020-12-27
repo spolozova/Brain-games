@@ -1,3 +1,4 @@
+// общие принципы работы игры. необходимо подставлять нужные аргументы исполняемых файлах.
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
@@ -7,8 +8,8 @@ const theGame = (answer, game, rules) => {
   let result = `Congratulations, ${userName}!`;
   let counter = 0;
   while (counter <= 2) {
-    const question = game();
-    const rightAnswer = answer(question);
+    const question = game(); // берется основная функция из файла с игрой.
+    const rightAnswer = answer(question); // функция правильного ответа из файла с игрой.
     console.log(`Question: ${question}`);
     const gamerAnswer = readlineSync.question('Your answer: ');
     if (gamerAnswer === rightAnswer) {
