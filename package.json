@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.20",
+    "mathjs": "^8.1.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
