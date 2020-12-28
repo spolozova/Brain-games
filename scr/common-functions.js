@@ -17,7 +17,7 @@ const theGame = (answer, game, rules) => {
       counter += 1;
     }
     if (gamerAnswer !== rightAnswer) {
-      console.log(`'${gamerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}`);
+      console.log(`'${gamerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
       result = `Let's try again, ${userName}!`;
       counter += 3;
     }
