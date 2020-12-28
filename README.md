@@ -3,4 +3,4 @@
 <a href="https://codeclimate.com/github/spolozova/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/38b6109f85fe7171c33c/maintainability" /></a>
 [![AutoMake](https://github.com/spolozova/frontend-project-lvl1/workflows/AutoMake/badge.svg)](https://github.com/spolozova/frontend-project-lvl1/actions)
 [![asciicast](https://asciinema.org/a/381366.svg)](https://asciinema.org/a/381366)
-[![asciicast](https://asciinema.org/a/381464.svg)](https://asciinema.org/a/381464)
+[![asciicast](https://asciinema.org/a/381467.svg)](https://asciinema.org/a/381467)
