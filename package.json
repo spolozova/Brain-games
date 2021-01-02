@@ -23,6 +23,7 @@
     "brain-calc": "bin/brain-calc.js"
   },
   "dependencies": {
+    "@hexlet/pairs": "^1.1.0",
     "lodash": "^4.17.20",
     "mathjs": "^8.1.0",
     "readline-sync": "^1.4.10"
