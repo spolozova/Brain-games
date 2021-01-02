@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import getRandomNumber, { rightAnswer, rule } from '../scr/gameEven.js';
-import theGame from '../scr/common-functions.js';
+import getRandomNumber, { rightAnswer, rule } from '../games/gameEven.js';
+import theGame from '../scr/index.js';
 
 console.log('Welcome to the Brain Games!');
 
