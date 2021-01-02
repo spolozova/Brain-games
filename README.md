@@ -4,3 +4,4 @@
 [![AutoMake](https://github.com/spolozova/frontend-project-lvl1/workflows/AutoMake/badge.svg)](https://github.com/spolozova/frontend-project-lvl1/actions)
 [![asciicast](https://asciinema.org/a/381366.svg)](https://asciinema.org/a/381366)
 [![asciicast](https://asciinema.org/a/381467.svg)](https://asciinema.org/a/381467)
+[![asciicast](https://asciinema.org/a/382246.svg)](https://asciinema.org/a/382246)
