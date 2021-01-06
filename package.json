@@ -25,14 +25,14 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
-    "@hexlet/pairs": "1.1.0",
-    "lodash": "4.17.20",
-    "mathjs": "8.1.0",
-    "readline-sync": "1.4.10"
+    "@hexlet/pairs": "^1.1.0",
+    "lodash": "^4.17.20",
+    "mathjs": "^8.1.0",
+    "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "eslint": "7.16.0",
-    "eslint-config-airbnb-base": "14.2.1",
-    "eslint-plugin-import": "2.22.1"
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
