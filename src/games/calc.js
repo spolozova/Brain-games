@@ -1,8 +1,13 @@
 import _ from 'lodash';
+import { cons, car, cdr } from '@hexlet/pairs';
 import randomNumber from '../utils.js';
 
 export const RULE = 'What is the result of the expression?';
-const calculator = () => `${randomNumber()} ${_.sample(['+', '-', '*'])} ${randomNumber()}`;
+const calculator = () => {
+  const pair = cons(randomNumber(), randomNumber());
+  const operator = _.sample(['+', '-', '*']);
+  return `${car(pair)} ${operator} ${cdr(pair)}`;
+};
 export const rightAnswer = (str) => {
   const separator = ' ';
   let answer = 0;
