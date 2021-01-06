@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import theGame from '../scr/index.js';
-import biggestNumber, { rightAnswer, rule } from '../games/gameGcd.js';
+import runGames from '../src/index.js';
+import biggestNumber, { rightAnswer, RULE } from '../src/games/gcd.js';
 
 console.log('Welcome to the Brain Games!');
-theGame(rightAnswer, biggestNumber, rule);
+runGames(rightAnswer, biggestNumber, RULE);

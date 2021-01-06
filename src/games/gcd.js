@@ -1,7 +1,7 @@
 import { cons, car, cdr } from '@hexlet/pairs';
-import getRandomNumber from './gameEven.js';
+import getRandomNumber from '../utils.js';
 
-export const rule = 'Find the greatest common divisor of given numbers.';
+export const RULE = 'Find the greatest common divisor of given numbers.';
 export default () => {
   const pair = cons(getRandomNumber(), getRandomNumber());
   return `${car(pair)} ${cdr(pair)}`;

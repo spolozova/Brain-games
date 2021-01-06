@@ -1,6 +1,6 @@
-import getRandomNumber from './gameEven.js';
+import getRandomNumber from '../utils.js';
 
-export const rule = 'What number is missing in the progression?';
+export const RULE = 'What number is missing in the progression?';
 const getProgression = () => {
   const getArray = () => {
     const counter = getRandomNumber();

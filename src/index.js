@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-const theGame = (answer, game, rules) => {
+const runGames = (answer, game, rules) => {
   const userName = greeting();
   console.log(rules);
   let result = `Congratulations, ${userName}!`;
@@ -24,4 +24,4 @@ const theGame = (answer, game, rules) => {
   }
   console.log(result);
 };
-export default theGame;
+export default runGames;

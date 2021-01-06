@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import randomNumber from './gameEven.js';
+import randomNumber from '../utils.js';
 
-export const rule = 'What is the result of the expression?';
+export const RULE = 'What is the result of the expression?';
 const calculator = () => {
   const ranNum1 = randomNumber();
   const ranNum2 = randomNumber();

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import theGame from '../scr/index.js';
-import getProgression, { rightAnswer, rule } from '../games/gameProgression.js';
+import runGames from '../src/index.js';
+import getProgression, { rightAnswer, RULE } from '../src/games/progression.js';
 
 console.log('Welcome to the Brain Games!');
-theGame(rightAnswer, getProgression, rule);
+runGames(rightAnswer, getProgression, RULE);

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import theGame from '../scr/index.js';
-import getRandomNumber from '../games/gameEven.js';
-import rightAnswer, { rule } from '../games/gamePrime.js';
+import runGames from '../src/index.js';
+import getRandomNumber from '../src/utils.js';
+import rightAnswer, { RULE } from '../src/games/prime.js';
 
 console.log('Welcome to the Brain Games!');
-theGame(rightAnswer, getRandomNumber, rule);
+runGames(rightAnswer, getRandomNumber, RULE);

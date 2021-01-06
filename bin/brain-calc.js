@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import theGame from '../scr/index.js';
-import calculator, { rightAnswer, rule } from '../games/gameCalc.js';
+import runGames from '../src/index.js';
+import calculator, { rightAnswer, RULE } from '../src/games/calc.js';
 
 console.log('Welcome to the Brain Games!');
-theGame(rightAnswer, calculator, rule);
+runGames(rightAnswer, calculator, RULE);
