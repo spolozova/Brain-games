@@ -20,6 +20,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Hexlet project check
-        uses: hexlet/project-action@release
-        with:
-          hexlet-id: ${{ secrets.12468 }}
+        uses: hexlet/project-action@release      
