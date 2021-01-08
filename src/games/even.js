@@ -1,4 +1,4 @@
-import runGame from '../index.js';
+import runGames from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const runGameEven = () => {
@@ -12,7 +12,7 @@ const runGameEven = () => {
     return [question, answer];
   };
 
-  runGame(RULE, getQuestionAndAnswer);
+  runGames(RULE, getQuestionAndAnswer);
 };
 
 export default runGameEven;

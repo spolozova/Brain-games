@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { cons, car, cdr } from '@hexlet/pairs';
 import randomNumber from '../utils.js';
-import runGame from '../index.js';
+import runGames from '../index.js';
 
 const runGameCalculator = () => {
   const RULE = 'What is the result of the expression?';
@@ -26,7 +26,7 @@ const runGameCalculator = () => {
     return [question, answer];
   };
 
-  runGame(RULE, getQuestionAndAnswer);
+  runGames(RULE, getQuestionAndAnswer);
 };
 
 export default runGameCalculator;

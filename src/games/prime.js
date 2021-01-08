@@ -1,4 +1,4 @@
-import runGame from '../index.js';
+import runGames from '../index.js';
 import getRundomNumber from '../utils.js';
 
 const runGamePrime = () => {
@@ -22,6 +22,6 @@ const runGamePrime = () => {
     return [question, answer];
   };
 
-  runGame(RULE, getQuestionAndAnswer);
+  runGames(RULE, getQuestionAndAnswer);
 };
 export default runGamePrime;
