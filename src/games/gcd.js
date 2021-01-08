@@ -1,21 +1,26 @@
 import { cons, car, cdr } from '@hexlet/pairs';
 import getRandomNumber from '../utils.js';
+import runGame from '../index.js';
 
-export const RULE = 'Find the greatest common divisor of given numbers.';
-export default () => {
-  const pair = cons(getRandomNumber(), getRandomNumber());
-  return `${car(pair)} ${cdr(pair)}`;
-};
-export const rightAnswer = (string) => {
-  const separator = ' ';
-  const numbers = string.split(separator);
-  const firstNum = Number(numbers[0]);
-  const secondNum = Number(numbers[1]);
-  const divisor = (first, second) => {
-    if (second === 0) {
-      return first;
+const runGameGcd = () => {
+  const RULE = 'Find the greatest common divisor of given numbers.';
+
+  const getRightAnswer = (firstNumber, secondNumber) => {
+    if (secondNumber === 0) {
+      return firstNumber;
     }
-    return divisor(second, first % second);
+    return getRightAnswer(secondNumber, firstNumber % secondNumber);
   };
-  return String(divisor(firstNum, secondNum));
+
+  const getQuestionAndAnswer = () => {
+    const firstNumber = getRandomNumber();
+    const secondNumber = getRandomNumber();
+    const pair = cons(firstNumber, secondNumber);
+    const question = `${car(pair)} ${cdr(pair)}`;
+    const answer = String(getRightAnswer(firstNumber, secondNumber));
+    return [question, answer];
+  };
+  runGame(RULE, getQuestionAndAnswer);
 };
+
+export default runGameGcd;
