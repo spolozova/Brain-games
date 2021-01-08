@@ -1,24 +1,32 @@
 import _ from 'lodash';
 import { cons, car, cdr } from '@hexlet/pairs';
 import randomNumber from '../utils.js';
+import runGame from '../index.js';
 
-export const RULE = 'What is the result of the expression?';
-const calculator = () => {
-  const pair = cons(randomNumber(), randomNumber());
-  const operator = _.sample(['+', '-', '*']);
-  return `${car(pair)} ${operator} ${cdr(pair)}`;
+const runGameCalculator = () => {
+  const RULE = 'What is the result of the expression?';
+
+  const getRightAnswer = (operator, number1, number2) => {
+    if (operator === '+') {
+      return number1 + number2;
+    }
+    if (operator === '-') {
+      return number1 - number2;
+    }
+    return number1 * number2;
+  };
+
+  const getQuestionAndAnswer = () => {
+    const number1 = randomNumber();
+    const number2 = randomNumber();
+    const pair = cons(number1, number2);
+    const operator = _.sample(['+', '-', '*']);
+    const question = `${car(pair)} ${operator} ${cdr(pair)}`;
+    const answer = String(getRightAnswer(operator, number1, number2));
+    return [question, answer];
+  };
+
+  runGame(RULE, getQuestionAndAnswer);
 };
-export const rightAnswer = (str) => {
-  const separator = ' ';
-  let answer = 0;
-  const arr = str.split(separator);
-  if (arr[1] === '+') {
-    answer = Number(arr[0]) + Number(arr[2]);
-  } else if ((arr[1]) === '-') {
-    answer = Number(arr[0]) - Number(arr[2]);
-  } else {
-    answer = Number(arr[0]) * Number(arr[2]);
-  }
-  return String(answer);
-};
-export default calculator;
+
+export default runGameCalculator;
