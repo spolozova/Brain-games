@@ -1,36 +1,29 @@
 import getRandomNumber from '../utils.js';
+import runGames from '../index.js';
 
-export const RULE = 'What number is missing in the progression?';
-const getProgression = () => {
-  const getArray = () => {
-    const counter = getRandomNumber();
-    let firstNumber = getRandomNumber();
-    const arrProgression = [];
-    for (let i = 0; i <= 10; i += 1) {
-      arrProgression.push(firstNumber);
-      firstNumber += counter;
-    }
-    return arrProgression;
+const runGameProgression = () => {
+  const RULE = 'What number is missing in the progression?';
+
+  const getQuestionAndAnswer = () => {
+    const getFullProgression = () => {
+      const counter = getRandomNumber();
+      let lastNumber = getRandomNumber();
+      const fullProgression = [];
+      for (let i = 0; i <= 10; i += 1) {
+        fullProgression.push(lastNumber);
+        lastNumber += counter;
+      }
+      return fullProgression;
+    };
+    const progression = getFullProgression();
+    const missNumber = getRandomNumber(0, 9);
+    const getAnswer = progression.splice(missNumber, 1, '..');
+    const question = progression.join(' ');
+    const answer = String(getAnswer);
+    return [question, answer];
   };
-  const progression = () => {
-    const newProgression = getArray();
-    newProgression[getRandomNumber(0, 9)] = '..';
-    return newProgression;
-  };
-  return progression().join(' ');
+
+  runGames(RULE, getQuestionAndAnswer);
 };
-export const rightAnswer = (string) => {
-  const separator = ' ';
-  const numbers = string.split(separator);
-  const len = numbers.length;
-  let answer;
-  for (let j = 0; j <= len; j += 1) {
-    if ((numbers[j] === '..' && j <= 1)) {
-      answer = Number(numbers[j + 1]) - (Number(numbers[len - 1]) - Number(numbers[len - 2]));
-    } else if (numbers[j] === '..') {
-      answer = Number(numbers[j - 1]) + Number((numbers[1] - numbers[0]));
-    }
-  }
-  return String(answer);
-};
-export default getProgression;
+
+export default runGameProgression;
