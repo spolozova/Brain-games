@@ -1,15 +1,14 @@
-// общие принципы работы игры. необходимо подставлять нужные аргументы исполняемых файлах.
 import readlineSync from 'readline-sync';
-import greeting from './cli.js';
 
-const runGames = (answer, game, rules) => {
-  const userName = greeting();
-  console.log(rules);
-  let result = `Congratulations, ${userName}!`;
+const runGames = (RULE, getQuestionAndAnswer) => {
+  console.log('Welcome to the Brain Games!');
+  const gamerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${gamerName}!`);
+  console.log(RULE);
+  let result = `Congratulations, ${gamerName}!`;
   let counter = 0;
   while (counter <= 2) {
-    const question = game(); // берется основная функция из файла с игрой.
-    const rightAnswer = answer(question); // функция правильного ответа из файла с игрой.
+    const [question, rightAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const gamerAnswer = readlineSync.question('Your answer: ');
     if (gamerAnswer === rightAnswer) {
@@ -18,7 +17,7 @@ const runGames = (answer, game, rules) => {
     }
     if (gamerAnswer !== rightAnswer) {
       console.log(`'${gamerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
-      result = `Let's try again, ${userName}!`;
+      result = `Let's try again, ${gamerName}!`;
       counter += 3;
     }
   }
