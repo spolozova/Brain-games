@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import { cons, car, cdr } from '@hexlet/pairs';
 import randomNumber from '../utils.js';
 import runGames from '../index.js';
 
@@ -19,9 +18,9 @@ const getRightAnswer = (operator, number1, number2) => {
 const getQuestionAndAnswer = () => {
   const number1 = randomNumber();
   const number2 = randomNumber();
-  const pair = cons(number1, number2);
+  const [x, y] = [number1, number2];
   const operator = _.sample(['+', '-', '*']);
-  const question = `${car(pair)} ${operator} ${cdr(pair)}`;
+  const question = `${x} ${operator} ${y}`;
   const answer = String(getRightAnswer(operator, number1, number2));
   return [question, answer];
 };
