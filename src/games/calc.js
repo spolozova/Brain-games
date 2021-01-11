@@ -18,9 +18,8 @@ const getRightAnswer = (operator, number1, number2) => {
 const getQuestionAndAnswer = () => {
   const number1 = randomNumber();
   const number2 = randomNumber();
-  const [x, y] = [number1, number2];
   const operator = _.sample(['+', '-', '*']);
-  const question = `${x} ${operator} ${y}`;
+  const question = `${number1} ${operator} ${number2}`;
   const answer = String(getRightAnswer(operator, number1, number2));
   return [question, answer];
 };
