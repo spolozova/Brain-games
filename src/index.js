@@ -5,9 +5,9 @@ const runGames = (rule, getQuestionAndAnswer) => {
   const gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
   console.log(rule);
-  let result = `Congratulations, ${gamerName}!`;
   let counter = 0;
-  while (counter <= 2) {
+  const numberOfRepetitions = 2;
+  while (counter <= numberOfRepetitions) {
     const [question, rightAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const gamerAnswer = readlineSync.question('Your answer: ');
@@ -16,10 +16,10 @@ const runGames = (rule, getQuestionAndAnswer) => {
       counter += 1;
     } else {
       console.log(`'${gamerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
-      result = `Let's try again, ${gamerName}!`;
+      console.log(`Let's try again, ${gamerName}!`);
       break;
     }
   }
-  console.log(result);
+  console.log(`Congratulations, ${gamerName}!`);
 };
 export default runGames;

@@ -4,10 +4,12 @@ import getRundomNumber from '../utils.js';
 const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
 const isPrime = (number) => {
-  if (number < 2) {
+  const halfOfNumber = number / 2;
+  const firstPrimeNumber = 2;
+  if (number < firstPrimeNumber) {
     return false;
   }
-  for (let i = 2; i <= number / 2; i += 1) {
+  for (let i = 2; i <= halfOfNumber; i += 1) {
     if (number % i === 0) {
       return false;
     }
