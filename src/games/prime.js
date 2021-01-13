@@ -5,11 +5,11 @@ const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
 const MINIMUM_NUMBER = 1;
 const MAXIMUM_NUMBER = 100;
-const RIRST_PRIME_NUMBER = 2;
+const FIRST_PRIME_NUMBER = 2;
 
 const isPrime = (number) => {
   const halfOfNumber = number / 2;
-  if (number < RIRST_PRIME_NUMBER) {
+  if (number < FIRST_PRIME_NUMBER) {
     return false;
   }
   for (let i = 2; i <= halfOfNumber; i += 1) {
