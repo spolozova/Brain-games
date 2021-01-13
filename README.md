@@ -18,7 +18,7 @@ $ brain-calc
 [example brain calc](https://asciinema.org/a/381467)
 
 ### Brain-gcd
-Gamer shuld finde the gratest common divisor of two given numbers.
+Gamer shuld find the gratest common divisor of two given numbers.
 ```
 $ brain-gcd
 ```
@@ -32,7 +32,7 @@ $ brain-prime
 [example brain prime](https://asciinema.org/a/382346)
 
 ### Brain-progression
-Gamer shuld finde what number is missing in given progression.
+Gamer shuld find what number is missing in given progression.
 ```
 $ brain-progression
 ```
