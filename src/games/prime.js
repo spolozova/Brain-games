@@ -3,10 +3,13 @@ import getRundomNumber from '../utils.js';
 
 const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
+const MINIMUM_NUMBER = 1;
+const MAXIMUM_NUMBER = 100;
+const RIRST_PRIME_NUMBER = 2;
+
 const isPrime = (number) => {
   const halfOfNumber = number / 2;
-  const firstPrimeNumber = 2;
-  if (number < firstPrimeNumber) {
+  if (number < RIRST_PRIME_NUMBER) {
     return false;
   }
   for (let i = 2; i <= halfOfNumber; i += 1) {
@@ -18,13 +21,11 @@ const isPrime = (number) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const question = getRundomNumber();
-  const answer = isPrime(question) ? 'yes' : 'no';
-  return [question, answer];
+  const number = getRundomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
+  const answer = isPrime(number) ? 'yes' : 'no';
+  return [number, answer];
 };
 
-const runPrime = () => {
+export default () => {
   runGames(RULE, getQuestionAndAnswer);
 };
-
-export default runPrime;

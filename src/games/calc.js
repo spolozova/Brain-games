@@ -4,28 +4,31 @@ import runGames from '../index.js';
 
 const RULE = 'What is the result of the expression?';
 
+const MINIMUM_NUMBER = 1;
+const MAXIMUM_NUMBER = 100;
+
 const getRightAnswer = (operator, number1, number2) => {
   switch (operator) {
     case '+':
       return number1 + number2;
     case '-':
       return number1 - number2;
-    default:
+    case '*':
       return number1 * number2;
+    default:
+      return 'mistake';
   }
 };
 
 const getQuestionAndAnswer = () => {
-  const number1 = randomNumber();
-  const number2 = randomNumber();
+  const number1 = randomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
+  const number2 = randomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
   const operator = _.sample(['+', '-', '*']);
   const question = `${number1} ${operator} ${number2}`;
   const answer = String(getRightAnswer(operator, number1, number2));
   return [question, answer];
 };
 
-const runCalculator = () => {
+export default () => {
   runGames(RULE, getQuestionAndAnswer);
 };
-
-export default runCalculator;

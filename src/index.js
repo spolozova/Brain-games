@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 
-const runGames = (rule, getQuestionAndAnswer) => {
+const ROUNDS_COUNT = 2;
+export default (rule, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   const gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
   console.log(rule);
   let counter = 0;
-  const numberOfRepetitions = 2;
-  while (counter <= numberOfRepetitions) {
+  while (counter <= ROUNDS_COUNT) {
     const [question, rightAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const gamerAnswer = readlineSync.question('Your answer: ');
@@ -17,9 +17,8 @@ const runGames = (rule, getQuestionAndAnswer) => {
     } else {
       console.log(`'${gamerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
       console.log(`Let's try again, ${gamerName}!`);
-      break;
+      return;
     }
   }
   console.log(`Congratulations, ${gamerName}!`);
 };
-export default runGames;
