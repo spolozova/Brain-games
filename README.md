@@ -4,31 +4,36 @@
 ![NodeCI](https://github.com/spolozova/frontend-project-lvl1/workflows/NodeCI/badge.svg)
 
 ### Brain-even
+Gamer shuld answer if number is even or not.
 ```
 $ brain-even
 ```
-[example](https://asciinema.org/a/381366)
+[example game even](https://asciinema.org/a/381366)
 
 ### Brain-calc
+Gamer shuld calculate the result of mathematical expression.
 ```
 $ brain-calc
 ```
-[example](https://asciinema.org/a/381467)
+[example brain calc](https://asciinema.org/a/381467)
 
 ### Brain-gcd
+Gamer shuld finde the gratest common divisor of two given numbers.
 ```
 $ brain-gcd
 ```
-[example](https://asciinema.org/a/382246)
+[example brain gcd](https://asciinema.org/a/382246)
 
 ### Brain-prime
+Gamer should answer if number is prime or not.
 ```
 $ brain-prime
 ```
-[example](https://asciinema.org/a/382346)
+[example brain prime](https://asciinema.org/a/382346)
 
 ### Brain-progression
+Gamer shuld finde what number is missing in given progression.
 ```
 $ brain-progression
 ```
-[example](https://asciinema.org/a/382357)
+[example brain progression](https://asciinema.org/a/382357)
