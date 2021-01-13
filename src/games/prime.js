@@ -8,11 +8,11 @@ const MAXIMUM_NUMBER = 100;
 const FIRST_PRIME_NUMBER = 2;
 
 const isPrime = (number) => {
-  const halfOfNumber = number / 2;
+  const maxDivisor = number / 2;
   if (number < FIRST_PRIME_NUMBER) {
     return false;
   }
-  for (let i = 2; i <= halfOfNumber; i += 1) {
+  for (let i = 2; i <= maxDivisor; i += 1) {
     if (number % i === 0) {
       return false;
     }

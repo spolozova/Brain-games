@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import randomNumber from '../utils.js';
+import getrandomNumber from '../utils.js';
 import runGames from '../index.js';
 
 const RULE = 'What is the result of the expression?';
@@ -21,8 +21,8 @@ const getRightAnswer = (operator, number1, number2) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const number1 = randomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
-  const number2 = randomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
+  const number1 = getrandomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
+  const number2 = getrandomNumber(MINIMUM_NUMBER, MAXIMUM_NUMBER);
   const operator = _.sample(['+', '-', '*']);
   const question = `${number1} ${operator} ${number2}`;
   const answer = String(getRightAnswer(operator, number1, number2));
