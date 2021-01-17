@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils.js';
-import runGames from '../index.js';
+import runGame from '../index.js';
 
 const RULE = 'Find the greatest common divisor of given numbers.';
 
@@ -22,5 +22,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-  runGames(RULE, getQuestionAndAnswer);
+  runGame(RULE, getQuestionAndAnswer);
 };

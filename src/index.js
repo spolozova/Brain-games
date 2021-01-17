@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 
-const ROUNDS_COUNT = 2;
+const ROUNDS_COUNT = 3;
 export default (rule, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   const gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
   console.log(rule);
-  let counter = 0;
+  let counter = 1;
   while (counter <= ROUNDS_COUNT) {
     const [question, rightAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);

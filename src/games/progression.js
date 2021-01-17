@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils.js';
-import runGames from '../index.js';
+import runGame from '../index.js';
 
 const RULE = 'What number is missing in the progression?';
 
@@ -33,5 +33,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-  runGames(RULE, getQuestionAndAnswer);
+  runGame(RULE, getQuestionAndAnswer);
 };

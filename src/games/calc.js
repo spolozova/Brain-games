@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import getrandomNumber from '../utils.js';
-import runGames from '../index.js';
+import runGame from '../index.js';
 
 const RULE = 'What is the result of the expression?';
 
@@ -16,7 +16,7 @@ const getRightAnswer = (operator, number1, number2) => {
     case '*':
       return number1 * number2;
     default:
-      return 'mistake';
+      return null;
   }
 };
 
@@ -30,5 +30,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-  runGames(RULE, getQuestionAndAnswer);
+  runGame(RULE, getQuestionAndAnswer);
 };
