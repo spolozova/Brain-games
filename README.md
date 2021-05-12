@@ -1,6 +1,6 @@
 ## Brain-games
 [![Actions Status](https://github.com/spolozova/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/spolozova/frontend-project-lvl1/actions)
-<a href="https://codeclimate.com/github/spolozova/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/38b6109f85fe7171c33c/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/d65c476c121bb6265090/maintainability)](https://codeclimate.com/github/spolozova/frontend-project-lvl1/maintainability)
 ![NodeCI](https://github.com/spolozova/frontend-project-lvl1/workflows/NodeCI/badge.svg)
 
 ### Brain-even
